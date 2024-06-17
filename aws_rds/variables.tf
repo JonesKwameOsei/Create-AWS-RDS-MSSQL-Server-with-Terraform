@@ -29,7 +29,7 @@ variable "engine" {
 variable "engine_version" {
   type        = list(any)
   description = "MSSQL and MySQL versions"
-  default     = ["8.0", "15.00.4043.16.v1"]
+  default     = ["8.0", "15.00.4073.23.v1"]
 }
 
 variable "instance_class" {
@@ -48,6 +48,12 @@ variable "db2_param" {
   type        = string
   description = "Parameter group name for RDS database"
   default     = "sqlserver-ex-15.0"
+}
+
+variable "license" {
+  type        = string
+  description = "License model for RDS database"
+  default     = "license-included"
 }
 
 variable "snapshot" {
@@ -71,7 +77,7 @@ variable "storage_type" {
 variable "local_cidr" {
   type        = list(string)
   description = "CIDR block for your IP address"
-  default     = ["89.241.28.185/32"]
+  default     = ["your-ip/32"]
 }
 
 variable "db_instance_type" {
